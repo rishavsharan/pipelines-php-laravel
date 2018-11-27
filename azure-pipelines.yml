@@ -22,5 +22,11 @@ steps:
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
 
+- script: composer post-root-package-install
+  displayName: 'env file'
+
+- script: composer post-create-project-cmd
+  displayName: 'keygen'
+
 - script: vendor/bin/phpunit
   displayName: 'Run tests with composer using phpunit'
