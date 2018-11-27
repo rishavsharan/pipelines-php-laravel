@@ -36,6 +36,13 @@ steps:
     testRunner: JUnit
     testResultsFiles: ./reports/junit.xml
 
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'JaCoCo' # Options: cobertura, jaCoCo
+    summaryFileLocation: $(System.DefaultWorkingDirectory)/MyApp/**/reports/index.xml
+    reportDirectory: $(System.DefaultWorkingDirectory)/MyApp/**/reports/
+    #additionalCodeCoverageFiles: # Optional
+
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'Junit XML'
