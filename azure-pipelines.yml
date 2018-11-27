@@ -39,8 +39,8 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'JaCoCo' # Options: cobertura, jaCoCo
-    summaryFileLocation: $(System.DefaultWorkingDirectory)/MyApp/**/reports/index.xml
-    reportDirectory: $(System.DefaultWorkingDirectory)/MyApp/**/reports/
+    summaryFileLocation: ./reports/index.xml
+    reportDirectory: ./reports/
     #additionalCodeCoverageFiles: # Optional
 
 - task: PublishPipelineArtifact@0
