@@ -34,4 +34,4 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testRunner: JUnit
-    testResultsFiles: ./reports/*.xml
+    testResultsFiles: ./reports/junit.xml
