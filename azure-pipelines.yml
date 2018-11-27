@@ -39,4 +39,4 @@ steps:
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'Junit XML'
-    targetPath: './reports/junit.xml'
+    targetPath: './reports/'
