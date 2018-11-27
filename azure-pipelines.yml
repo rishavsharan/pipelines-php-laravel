@@ -30,3 +30,8 @@ steps:
 
 - script: ./vendor/bin/phpunit --log-junit ./reports/junit.xml --coverage-html ./reports --coverage-xml ./reports
   displayName: 'Run tests with composer using phpunit'
+
+- task: PublishTestResults@2
+  inputs:
+    testRunner: JUnit
+    testResultsFiles: ./reports/*.xml
