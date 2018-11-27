@@ -22,11 +22,11 @@ steps:
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
 
-- script: composer post-root-package-install
-  displayName: 'env file'
+- script: cp .env.example .env
+  displayName: 'Generate .env file from the provided .env.Example'
 
-- script: composer post-create-project-cmd
-  displayName: 'keygen'
+- script: php artisan key:generate
+  displayName: 'Generate 32 bit encryption key for the app'
 
 - script: vendor/bin/phpunit
   displayName: 'Run tests with composer using phpunit'
