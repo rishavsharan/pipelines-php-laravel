@@ -28,5 +28,5 @@ steps:
 - script: php artisan key:generate
   displayName: 'Generate 32 bit encryption key for the app'
 
-- script: vendor/bin/phpunit
+- script: ./vendor/bin/phpunit --log-junit ./reports/junit.xml --coverage-html ./reports --coverage-xml ./reports
   displayName: 'Run tests with composer using phpunit'
