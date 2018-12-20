@@ -40,8 +40,8 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'jaCoCo' # Options: cobertura, jaCoCo
-    summaryFileLocation: './reports/index.xml'
-    reportDirectory: './reports/'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/reports/index.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/**/reports/'
     #additionalCodeCoverageFiles: # Optional
 
 - task: PublishPipelineArtifact@0
