@@ -36,10 +36,10 @@ steps:
     testRunner: JUnit
     testResultsFiles: './reports/junit.xml'
     alwaysRun: 'true'
-    
+
 - task: PublishCodeCoverageResults@1
   inputs:
-    codeCoverageTool: 'cobertura' # Options: cobertura, jaCoCo
+    codeCoverageTool: 'jaCoCo' # Options: cobertura, jaCoCo
     summaryFileLocation: './reports/index.xml'
     reportDirectory: './reports/'
     #additionalCodeCoverageFiles: # Optional
