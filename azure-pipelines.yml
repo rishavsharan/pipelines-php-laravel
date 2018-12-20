@@ -34,13 +34,13 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testRunner: JUnit
-    testResultsFiles: ./reports/junit.xml
+    testResultsFiles: './reports/junit.xml'
 
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'cobertura' # Options: cobertura, jaCoCo
-    summaryFileLocation: ./reports/index.xml
-    reportDirectory: ./reports/
+    summaryFileLocation: './reports/index.xml'
+    reportDirectory: './reports/'
     #additionalCodeCoverageFiles: # Optional
 
 - task: PublishPipelineArtifact@0
