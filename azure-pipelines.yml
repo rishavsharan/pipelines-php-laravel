@@ -35,7 +35,8 @@ steps:
   inputs:
     testRunner: JUnit
     testResultsFiles: './reports/junit.xml'
-
+    alwaysRun: 'true'
+    
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'cobertura' # Options: cobertura, jaCoCo
@@ -45,5 +46,6 @@ steps:
 
 - task: PublishPipelineArtifact@0
   inputs:
-    artifactName: 'Junit XML'
+    artifactName: 'Reports'
     targetPath: './reports/'
+    alwaysRun: 'true'
